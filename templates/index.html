@@ -18,16 +18,17 @@
 
 <div class="login_slowgan text-center">
   <p>&nbsp;</p>
-  <p class="text-center"><a href="#"><img src="{{url_for('static', filename='logo.png')}}""></a></p>
+  <p class="text-center"><img src="{{url_for('static', filename='logo.png')}}""></p>
   <h1>Welcome to  <span style="color:#F26932;">Unicorn Portal</span></h1>
 </div>
 <p>&nbsp;</p>
+
 
 <div class="container">
   <div class="jumbotron">
   <div class="row">
   <div class="col-md-6 col-md-offset-3">
-  <form action="http://0.0.0.0:5005/indigo/getindigo" method="post">
+  <form action="{{base_url}}indigo/getindigo" method="post">
   <div class="form-group">
     <label for="lastName">Last Name:</label>
     <input type="text" class="form-control" id="lastName" name="lastName">

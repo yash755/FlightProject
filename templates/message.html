@@ -29,14 +29,14 @@
   <div class="col-md-6 col-md-offset-3">
   {% if response_message == 202 %}
   <h2> Success!!!</h2>
-  <a class="btn btn-warning btn-lg btn-block" href="http://localhost:5005/">Go back to our Homepage.</a>
+  <a class="btn btn-warning btn-lg btn-block" href="{{base_url}}">Go back to our Homepage.</a>
   {% elif response_message == 302 %}
       <h2>Sorry you entered wrong details !!!</h2>
-      <a class="btn btn-warning btn-lg btn-block" href="http://localhost:5005/">Go back to our Homepage.</a>
+      <a class="btn btn-warning btn-lg btn-block" href="{{base_url}}">Go back to our Homepage.</a>
 
   {% elif response_message == 500 %}
       <h2>Oops something went wrong !!! Try again</h2>
-      <a class="btn btn-warning btn-lg btn-block" href="http://localhost:5005/">Go back to our Homepage.</a>
+      <a class="btn btn-warning btn-lg btn-block" href="{{base_url}}">Go back to our Homepage.</a>
   {% endif %}
   </div>
 </div>
