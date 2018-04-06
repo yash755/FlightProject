@@ -68,20 +68,6 @@ def getindigo():
                     flight = flight_detail.find_all('td')
                     for f in flight:
                         x.append(f.text.strip())
-                    # k = flight_details.text.strip()
-                    # k = k.split('\n')
-                    # print (k)
-                    # if len(k) >= 10:
-                    #     x.append(k[0])
-                    #     x.append(k[1])
-                    #     x.append(k[2])
-                    #     x.append(k[3])
-                    #     x.append(k[4])
-                    #     x.append(k[5])
-                    #     x.append(k[6])
-                    #     x.append(k[7])
-                    #     x.append(k[8])
-                    #     x.append(k[9])
                 elif len(flight_detail) >1:
                     flight = flight_detail[0].find_all('td')
                     for f in flight:
