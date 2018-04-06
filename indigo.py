@@ -1,8 +1,8 @@
 from flask import Blueprint
 from flask import request
 from flask import Flask,redirect
-import requests 
 import globals
+import requests
 from flask import json
 from flask import Flask, render_template
 from flask import jsonify

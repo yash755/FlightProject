@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 from flask import request
-import requests 
 import globals
+import requests
 from flask import json
 from flask import jsonify
 from bs4 import BeautifulSoup
