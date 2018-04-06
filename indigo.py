@@ -51,26 +51,44 @@ def getindigo():
                 list_flight = html.find('ul',{'class':'list-inline'})
 
                 final_list= []
-                name = list_flight.find('h2')
+                names = list_flight.find_all('h2')
                 x = []
-                x.append(name.text.strip())
+                finalname = ''
+                for name in names:
+                    finalname = finalname +  name.text.strip() + ','
+                x.append(finalname)
                 x.append(str(datetime.datetime.now()))
-                flight_details = html.find('div',{'class':'itiFlightDetails flights_table'})
-                flight_details = flight_details.find('table')
-                flight_details = flight_details.find('tbody')
-                k = flight_details.text.strip()
-                k = k.split('\n')
-                if len(k) >= 10:
-                    x.append(k[0])
-                    x.append(k[1])
-                    x.append(k[2])
-                    x.append(k[3])
-                    x.append(k[4])
-                    x.append(k[5])
-                    x.append(k[6])
-                    x.append(k[7])
-                    x.append(k[8])
-                    x.append(k[9])
+                flight_all_details = html.find('div',{'class':'itiFlightDetails flights_table'})
+                flight_all_details = flight_all_details.find('table')
+                flight_all_details = flight_all_details.find('tbody')
+
+                flight_detail = flight_all_details.find_all('tr')
+
+                if len(flight_detail) == 1:
+                    flight = flight_detail.find_all('td')
+                    for f in flight:
+                        x.append(f.text.strip())
+                    # k = flight_details.text.strip()
+                    # k = k.split('\n')
+                    # print (k)
+                    # if len(k) >= 10:
+                    #     x.append(k[0])
+                    #     x.append(k[1])
+                    #     x.append(k[2])
+                    #     x.append(k[3])
+                    #     x.append(k[4])
+                    #     x.append(k[5])
+                    #     x.append(k[6])
+                    #     x.append(k[7])
+                    #     x.append(k[8])
+                    #     x.append(k[9])
+                elif len(flight_detail) >1:
+                    flight = flight_detail[0].find_all('td')
+                    for f in flight:
+                        x.append(f.text.strip())
+
+                    destination = flight_detail[len(flight_detail)-1].find_all('td')
+                    x[6] = destination[4].text.strip()
 
                 final_list.append(x)
                 filename = "final.csv"

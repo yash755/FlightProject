@@ -28,15 +28,15 @@
   <div class="jumbotron">
   <div class="row">
   <div class="col-md-6 col-md-offset-3">
-  <form action="{{base_url}}indigo/getindigo" method="post">
+  <form action="{{base_url}}airline" method="post">
   <div class="form-group">
-    <label for="lastName">Last Name:</label>
-    <input type="text" class="form-control" id="lastName" name="lastName">
-  </div>
-  <div class="form-group">
-    <label for="pnr">Refrence Number:</label>
-    <input type="text" class="form-control" id="pnr" name="pnr">
-  </div>
+      <label for="sel1">Select Airline Service:</label>
+      <select name="airline_name" class="form-control" id="sel1">
+        <option value="indigo">Indigo</option>
+        <option value="spicejet">SpiceJet</option>
+        <option value="goair">GoAir</option>
+      </select>
+      <br>
   <button type="submit" class="btn btn-default">Submit</button>
 </form>
   </div>
@@ -46,4 +46,3 @@
 
 </body>
 </html>
-
