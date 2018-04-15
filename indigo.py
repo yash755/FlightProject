@@ -55,9 +55,12 @@ def getindigo():
                 x = []
                 finalname = ''
                 for name in names:
-                    finalname = finalname +  name.text.strip() + ','
+                    fName = name.text.strip()
+                    if lastname.lower() in fName.lower():
+                        finalname = finalname +  name.text.strip()
                 x.append(finalname)
                 x.append(str(datetime.datetime.now()))
+                x.append('phonenumber')
                 flight_all_details = html.find('div',{'class':'itiFlightDetails flights_table'})
                 flight_all_details = flight_all_details.find('table')
                 flight_all_details = flight_all_details.find('tbody')
@@ -74,7 +77,14 @@ def getindigo():
                         x.append(f.text.strip())
 
                     destination = flight_detail[len(flight_detail)-1].find_all('td')
-                    x[6] = destination[4].text.strip()
+                    if len(destination) >= 8:
+                        x.append(destination[3].text.strip())
+                        x.append(destination[4].text.strip())
+                        x.append(destination[5].text.strip())
+                        x.append(destination[6].text.strip())
+                        x.append(destination[7].text.strip())
+                        x.append(destination[8].text.strip())
+
 
                 final_list.append(x)
                 filename = "final.csv"

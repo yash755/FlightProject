@@ -22,4 +22,4 @@ def main():
 	return render_template('base.html', base_url = globals.base_url)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=int("5019"),debug = True)
+    app.run(host="0.0.0.0", port=int("5021"),debug = True)
