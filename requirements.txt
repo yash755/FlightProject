@@ -108,7 +108,7 @@ queuelib==1.4.2
 reportlab==3.0
 repoze.lru==0.6
 requests==2.18.1
-rsa==3.4.2
+rsa==4.1
 selenium==3.4.3
 service-identity==17.0.0
 sessioninstaller==0.0.0
