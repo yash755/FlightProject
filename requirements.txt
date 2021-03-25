@@ -11,7 +11,7 @@ PAM==0.4.2
 Pillow==2.3.0
 PyDispatcher==2.0.5
 PyMySQL==0.8.0
-PyYAML==3.12
+PyYAML==5.4
 Pygments==1.6
 Routes==2.0
 Scrapy==1.4.0
