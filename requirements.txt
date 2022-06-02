@@ -68,7 +68,7 @@ google-cloud-videointelligence==0.25.0
 google-cloud-vision==0.25.0
 google-resumable-media==0.1.1
 googleapis-common-protos==1.5.2
-html5lib==0.999
+html5lib==0.99999999
 httplib2==0.10.3
 idna==2.5
 incapsula-cracker==0.1.3
