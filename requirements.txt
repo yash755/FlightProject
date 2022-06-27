@@ -105,7 +105,7 @@ python-jose==1.3.2
 pytz==2017.2
 pyxdg==0.25
 queuelib==1.4.2
-reportlab==3.0
+reportlab==3.5.55
 repoze.lru==0.6
 requests==2.18.1
 rsa==3.4.2
